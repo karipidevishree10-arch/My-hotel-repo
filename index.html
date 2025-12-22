@@ -2,68 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sunrise Hotel</title>
+  <title>RoyalStay Hotel Booking</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>Sunrise Hotel</h1>
-  <nav>
-    <a href="#rooms">Rooms</a>
-    <a href="#booking">Book Now</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <h1>RoyalStay Hotel – 5 Star Booking</h1>
 </header>
 
-<section class="hero">
-  <h2>Luxury Stay, Comfort Guaranteed</h2>
-  <p>Book your perfect room at the best price</p>
-</section>
+<section class="card">
+<form id="bookingForm">
 
-<section id="rooms" class="rooms">
-  <h2>Our Rooms</h2>
+  <h2>Primary Guest</h2>
+  <input id="primaryName" placeholder="Primary Guest Name" required>
+  <input id="email" type="email" placeholder="Email" required>
+  <input id="phone" placeholder="10 Digit Phone Number" maxlength="10" required>
+  <input id="aadhaar" placeholder="Aadhaar Number" required>
 
-  <div class="room-card">
-    <h3>Standard Room</h3>
-    <p>₹2000 / night</p>
-  </div>
+  <label>Guest Type</label>
+  <select id="guestType">
+    <option>Family</option>
+    <option>Couple</option>
+    <option>Bachelors</option>
+  </select>
 
-  <div class="room-card">
-    <h3>Deluxe Room</h3>
-    <p>₹3500 / night</p>
-  </div>
+  <label>Members (Max 4)</label>
+  <input id="members" type="number" min="1" max="4" required>
 
-  <div class="room-card">
-    <h3>Suite Room</h3>
-    <p>₹5000 / night</p>
-  </div>
-</section>
+  <div id="memberDetails"></div>
 
-<section id="booking" class="booking">
-  <h2>Book Your Room</h2>
+  <label>Bed Type (Only if 4 members)</label>
+  <select id="bedType">
+    <option value="">Select</option>
+    <option>1 Master + 1 Small</option>
+    <option>4 Small Beds</option>
+    <option>2 Medium Beds (3x3)</option>
+  </select>
 
-  <form id="bookingForm">
-    <input type="text" id="name" placeholder="Your Name" required>
+  <h2>Room & Facilities</h2>
 
-    <select id="roomType">
-      <option value="2000">Standard Room</option>
-      <option value="3500">Deluxe Room</option>
-      <option value="5000">Suite Room</option>
+  <select id="roomType">
+    <option value="4500">Standard – ₹4500/night</option>
+    <option value="7000">Deluxe – ₹7000/night</option>
+    <option value="10000">Suite – ₹10000/night</option>
+  </select>
+
+  <select id="ac">
+    <option value="0">Non-AC</option>
+    <option value="1500">AC (+₹1500/day)</option>
+  </select>
+
+  <select id="heater">
+    <option value="0">No Heater</option>
+    <option value="800">Heater (+₹800/day)</option>
+  </select>
+
+  <h2>Food</h2>
+
+  <select id="foodRequired">
+    <option value="No">No Food</option>
+    <option value="Yes">Food Required</option>
+  </select>
+
+  <div id="foodSection">
+    <select id="foodType">
+      <option>Veg</option>
+      <option>Non-Veg</option>
     </select>
 
-<input type="date" id="checkIn" required>
-<input type="date" id="checkOut" required>
+    <select id="foodPrice">
+      <option value="1200">Indian Thali – ₹1200</option>
+      <option value="1500">Continental – ₹1500</option>
+      <option value="1800">Chinese – ₹1800</option>
+      <option value="2500">Luxury Buffet – ₹2500</option>
+    </select>
+  </div>
 
-    <button type="submit">Calculate Price</button>
-  </form>
+  <h2>Dates</h2>
+  <input id="checkIn" type="date" required>
+  <input id="checkOut" type="date" required>
 
-  <p id="result"></p>
+  <button type="submit">Proceed to Payment</button>
+
+</form>
 </section>
-
-<footer id="contact">
-  <p>© 2025 Sunrise Hotel | Contact: +91 9876543210</p>
-</footer>
 
 <script src="script.js"></script>
 </body>

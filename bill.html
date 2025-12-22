@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RoyalStay Hotel Invoice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="invoice">
+
+  <!-- Invoice Header -->
+  <div class="invoice-header">
+    <img src="image.png" alt="RoyalStay Logo" class="hotel-logo">
+    <div>
+      <h1>RoyalStay Hotel</h1>
+      <p>5-Star Luxury & Comfort</p>
+      <p>Email: info@royalstay.com | Ph: +91-9876543210</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Invoice Body -->
+  <div id="billOutput"></div>
+
+  <hr>
+
+  <!-- Invoice Footer -->
+  <div class="invoice-footer">
+    <p>Thank you for choosing RoyalStay Hotel</p>
+    <p>We wish you a pleasant stay</p>
+  </div>
+
+  <button onclick="window.print()">Print Bill</button>
+  <button onclick="logout()">Logout</button>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
