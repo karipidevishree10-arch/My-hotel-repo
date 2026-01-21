@@ -35,7 +35,6 @@ if (membersInput && memberDetails) {
   });
 }
 
-/* ---------------- BOOKING PAGE LOGIC ---------------- */
 const bookingForm = document.getElementById("bookingForm");
 
 if (bookingForm) {
@@ -105,7 +104,6 @@ if (bookingForm) {
   });
 }
 
-/* ---------------- PAYMENT PAGE LOGIC ---------------- */
 const paymentForm = document.getElementById("paymentForm");
 
 if (paymentForm) {
@@ -126,7 +124,6 @@ if (paymentForm) {
   });
 }
 
-/* ---------------- BILL PAGE LOGIC ---------------- */
 document.addEventListener("DOMContentLoaded", () => {
   const billOutput = document.getElementById("billOutput");
   if (!billOutput) return;
@@ -171,7 +168,6 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
 });
 
-/* ---------------- LOGOUT ---------------- */
 function logout() {
   localStorage.clear();
   window.location.href = "index.html";
